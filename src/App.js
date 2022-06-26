@@ -12,7 +12,7 @@ function App() {
 
   const addFriend = () => {
     axios
-      .post("http://localhost:3001/addfriend", {
+      .post("https://mern-rka-1.herokuapp.com/addfriend", {
         name: name,
         age: age,
         description: description,
@@ -31,7 +31,7 @@ function App() {
   const updateFriend = (id) => {
     const newAge = prompt("Enter the new ID of the patient: ");
 
-    axios.put("http://localhost:3001/update", {
+    axios.put("https://mern-rka-1.herokuapp.com/update", {
       newAge: newAge,
       id:id,
     }).then(()=>{
@@ -42,7 +42,7 @@ function App() {
   };
 
   const deleteFriend = (id)=>{
-    axios.delete(`http://localhost:3001/delete/${id}`)
+    axios.delete(`https://mern-rka-1.herokuapp.com/delete/${id}`)
     .then(()=>{
 
       setListofFriends(listOfFrriends.filter((val)=>{
@@ -53,7 +53,7 @@ function App() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3001/read")
+      .get("https://mern-rka-1.herokuapp.com/read")
       .then((response) => {
         setListofFriends(response.data);
       })
