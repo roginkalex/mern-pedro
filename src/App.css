@@ -23,6 +23,7 @@ body {
   font-size: 18px;
   margin: 10px;
   padding-left: 10px;
+  border-radius: 1rem;
 }
 .inputs button {
   border: none;
@@ -30,6 +31,8 @@ body {
   height: 50px;
   background-color: rgb(58, 212, 236);
   color: black;
+  margin-top: 1rem;
+  border-radius: 1rem;
 }
 .inputs button:hover{
   cursor: pointer;
@@ -49,11 +52,11 @@ body {
   margin:10px;
 }
 .friend{
-  width: 1000px;
+  width: 500px;
   height: 60px;
   background-color: rgb(58, 212, 236);
   color: aliceblue;
-  font-family: 'Courier New', Courier, monospace;
+  font-family:'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
   display: flex;
   margin: 20px;
 }
@@ -65,4 +68,14 @@ body {
   margin-top: 20px;
   margin-right: 10px;
   background-color: #93fe83;
+}
+.heading{
+  color: white;
+  background-color: blue;
+}
+
+@media(max-width: 500px) {
+  .heading{
+    background-color: rgb(205, 12, 208);
+  }
 }

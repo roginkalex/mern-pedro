@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 
 
+
 function App() {
   const [name, setName] = useState("");
   const [age, setAge] = useState(0);
@@ -61,13 +62,18 @@ function App() {
         console.log("Error");
       });
   }, []);
-
+  
   return (
+    
     <div className="App">
+      <div className="heading">
+        <h1>Booking Management System</h1>
+      </div>
+
       <div className="inputs">
         <input
           type="text"
-          placeholder="Name"
+          placeholder="Customer Name"
           onChange={(event) => {
             setName(event.target.value);
           }}
@@ -76,19 +82,19 @@ function App() {
 
         <input
           type="number"
-          placeholder="Age"
+          placeholder="Date & Time"
           onChange={(event) => {
             setAge(event.target.value);
           }}
         />
         <input
           type="text"
-          placeholder="Status"
+          placeholder="Menu"
           onChange={(event) => {
             setDescription(event.target.value);
           }}
         />
-        <button onClick={addFriend}>Add record</button>
+        <button onClick={addFriend}>Add Booking</button>
       </div>
       <div className="listOfFriends">
         {listOfFrriends.map((val) => {
@@ -121,3 +127,5 @@ function App() {
 }
 
 export default App;
+
+
