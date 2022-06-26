@@ -82,14 +82,14 @@ function App() {
 
         <input
           type="number"
-          placeholder="Date & Time"
+          placeholder="Date"
           onChange={(event) => {
             setAge(event.target.value);
           }}
         />
         <input
           type="text"
-          placeholder="Menu"
+          placeholder="Time"
           onChange={(event) => {
             setDescription(event.target.value);
           }}
